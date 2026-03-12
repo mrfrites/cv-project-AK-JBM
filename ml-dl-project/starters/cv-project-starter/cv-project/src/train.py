@@ -90,6 +90,8 @@ def main(cfg_path):
     patience, waited = cfg["early_stopping"]["patience"], 0
 
     for epoch in range(1, cfg["train"]["epochs"] + 1):
+
+        print(f"\n=== Epoch {epoch}/{cfg['train']['epochs']} ===")  # <-- ajout
         tr_loss = train_one_epoch(model, train_loader, crit, opt, device)
         val_loss, val_acc = evaluate(model, val_loader, crit, device, num_classes)
         if sch: sch.step()
