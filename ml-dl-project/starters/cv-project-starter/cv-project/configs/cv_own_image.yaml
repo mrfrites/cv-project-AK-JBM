@@ -28,3 +28,15 @@ train:
 early_stopping:
   patience: 5
   min_delta: 0.0
+
+classes:
+  - airplane
+  - automobile
+  - bird
+  - cat
+  - deer
+  - dog
+  - frog
+  - horse
+  - ship
+  - truck
